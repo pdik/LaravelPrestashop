@@ -24,5 +24,18 @@
     }
   ],
   "minimum-stability": "dev",
-  "require": {}
+  "require": {
+    "illuminate/support": "8.x-dev",
+    "guzzlehttp/guzzle": "7.4.x-dev"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pdik\\LaravelPrestashop\\LaravelPrestashopServiceProvider"
+      ],
+      "aliases": {
+        "LaravelPrestashop": "Pdik\\LaravelPrestashop\\LaravelPrestashopFacade"
+      }
+    }
+  }
 }
