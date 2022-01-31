@@ -1,0 +1,28 @@
+{
+  "name": "pdik/laravel-prestashop",
+  "description": "Laravel wrapper for the prestashop webservice",
+  "type": "library",
+  "license": "mit",
+  "keywords": [
+    "Pdik",
+    "laravel-prestashop"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pdik\\LaravelPrestashop\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pdik\\LaravelPrestashop\\Tests\\": "tests"
+    }
+  },
+  "authors": [
+    {
+      "name": "Pepijn dik",
+      "email": "pepijn@pdik.nl"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
+}
