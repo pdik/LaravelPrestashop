@@ -9,12 +9,15 @@
   ],
   "autoload": {
     "psr-4": {
-      "Pdik\\LaravelPrestashop\\": "src"
+      "Pdik\\LaravelPrestaShop\\": "src"
+    },
+    "psr-0": {
+      "Pdik\\LaravelPrestaShop\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Pdik\\LaravelPrestashop\\Tests\\": "tests"
+      "Pdik\\LaravelPrestaShop\\Tests\\": "tests"
     }
   },
   "authors": [
@@ -25,16 +28,20 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "illuminate/support": "8.x-dev",
-    "guzzlehttp/guzzle": "7.4.x-dev"
+    "illuminate/support": "^8",
+    "guzzlehttp/guzzle": "^7.4",
+    "ext-simplexml": "*"
+  },
+  "config": {
+    "sort-packages": true
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Pdik\\LaravelPrestashop\\LaravelPrestashopServiceProvider"
+        "Pdik\\LaravelPrestaShop\\LaravelPrestashopServiceProvider"
       ],
       "aliases": {
-        "LaravelPrestashop": "Pdik\\LaravelPrestashop\\LaravelPrestashopFacade"
+        "LaravelPrestashop": "Pdik\\LaravelPrestaShop\\LaravelPrestashopFacade"
       }
     }
   }

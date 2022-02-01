@@ -1,13 +1,8 @@
 <?php
 
-namespace Pdik\LaravelPrestashop\Resources;
-
-
-use Pdik\LaravelPrestashop\Prestashop;
-
-use Pdik\LaravelPrestashop\Query;
-use Pdik\LaravelPrestashop\Persistance;
-use Pdik\LaravelPrestashop\Resources\Model;
+namespace Pdik\LaravelPrestaShop\Resources;
+use Pdik\LaravelPrestaShop\Query;
+use Pdik\LaravelPrestaShop\Persistance;
 
 class Customer extends Model
 {

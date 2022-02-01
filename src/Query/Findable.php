@@ -1,11 +1,11 @@
 <?php
 
-namespace Pdik\LaravelPrestashop\Query;
+namespace Pdik\LaravelPrestaShop\Query;
 
 
-Use Pdik\LaravelPrestashop\Exceptions\PrestashopWebserviceException;
-use Pdik\LaravelPrestashop\Prestashop;
-use Pdik\LaravelPrestashop\Resources\Model;
+Use Pdik\LaravelPrestaShop\Exceptions\PrestashopWebserviceException;
+use Pdik\LaravelPrestaShop\Prestashop;
+use Pdik\LaravelPrestaShop\Resources\Model;
 
 trait Findable
 {

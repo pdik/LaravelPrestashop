@@ -1,10 +1,10 @@
 <?php
 
-namespace Pdik\LaravelPrestashop\Query;
+namespace Pdik\LaravelPrestaShop\Query;
 
 
-Use Pdik\LaravelPrestashop\Exceptions\PrestashopWebserviceException;
-use Pdik\LaravelPrestashop\Prestashop;
+Use Pdik\LaravelPrestaShop\Exceptions\PrestashopWebserviceException;
+use Pdik\LaravelPrestaShop\Prestashop;
 
 
 class Resultset

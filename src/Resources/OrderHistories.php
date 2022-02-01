@@ -1,13 +1,13 @@
 <?php
 
-namespace Pdik\LaravelPrestashop\Resources;
+namespace Pdik\LaravelPrestaShop\Resources;
 
 
-use Pdik\LaravelPrestashop\Prestashop;
+use Pdik\LaravelPrestaShop\Prestashop;
 
-use Pdik\LaravelPrestashop\Query;
-use Pdik\LaravelPrestashop\Persistance;
-use Pdik\LaravelPrestashop\Resources\Model;
+use Pdik\LaravelPrestaShop\Query;
+use Pdik\LaravelPrestaShop\Persistance;
+use Pdik\LaravelPrestaShop\Resources\Model;
 
 class OrderHistories extends Model
 {

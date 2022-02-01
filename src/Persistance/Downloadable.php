@@ -1,8 +1,8 @@
 <?php
 
-namespace Pdik\LaravelPrestashop\Persistance;
+namespace Pdik\LaravelPrestaShop\Persistance;
 
-use Pdik\LaravelPrestashop\Prestashop;
+use Pdik\LaravelPrestaShop\Prestashop;
 use GuzzleHttp\Client;
 
 trait Downloadable

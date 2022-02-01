@@ -1,15 +1,15 @@
 <?php
 
-namespace Pdik\LaravelPrestashop\Resources;
+namespace Pdik\LaravelPrestaShop\Resources;
 
 
 
-Use Pdik\LaravelPrestashop\Exceptions\PrestashopWebserviceException;
-use Pdik\LaravelPrestashop\Prestashop;
+Use Pdik\LaravelPrestaShop\Exceptions\PrestashopWebserviceException;
+use Pdik\LaravelPrestaShop\Prestashop;
 
-use Pdik\LaravelPrestashop\Query;
-use Pdik\LaravelPrestashop\Persistance;
-use Pdik\LaravelPrestashop\Resources\Model;
+use Pdik\LaravelPrestaShop\Query;
+use Pdik\LaravelPrestaShop\Persistance;
+use Pdik\LaravelPrestaShop\Resources\Model;
 
 class Addresses extends Model
 {

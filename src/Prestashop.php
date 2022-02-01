@@ -1,8 +1,8 @@
 <?php
 
-namespace Pdik\LaravelPrestashop;
+namespace Pdik\LaravelPrestaShop;
 
-use Pdik\LaravelPrestashop\Exceptions\PrestashopWebserviceException;
+use Pdik\LaravelPrestaShop\Exceptions\PrestashopWebserviceException;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
@@ -11,10 +11,12 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
+use Pdik\LaravelPrestaShop\Traits\Parser;
 use SimpleXMLElement;
 
 class Prestashop
 {
+
     /** @var string Shop url */
     protected $shop_url;
 
@@ -65,8 +67,7 @@ class Prestashop
      */
     public function checkCustomerExist($email)
     {
-        //   $params = ['filter' => $email, 'display' => '[company,id]'];
-        return $this->get('customers', ['filter[email]' => $email, 'display' => '[company,id]']);
+        return $this->get('customers', ['filter[email]' => $email, 'display' => '[id]']);
     }
 
     /**
@@ -99,34 +100,34 @@ class Prestashop
 
         // Create param string
 
-            $endpoint .= strpos($endpoint, '?') === false ? '?' : '&';
+        $endpoint .= strpos($endpoint, '?') === false ? '?' : '&';
 
-            //Check if params match the available options
-            $options = array(
-                'filter',
-                'display',
-                'sort',
-                'limit',
-                'id_shop',
-                'id_group_shop',
-                'schema',
-                'language',
-                'date',
-                'price'
-            );
-            $url_params = [];
-            //Added full display always
-            if (!array_key_exists('display', $params)) {
-                $params['display'] = 'full';
-            }
-            foreach ($options as $p) {
-                foreach ($params as $k => $o) {
-                    if (strpos($k, $p) !== false) {
-                        $url_params[$k] = $o;
-                    }
+        //Check if params match the available options
+        $options = array(
+            'filter',
+            'display',
+            'sort',
+            'limit',
+            'id_shop',
+            'id_group_shop',
+            'schema',
+            'language',
+            'date',
+            'price'
+        );
+        $url_params = [];
+        //Added full display always
+        if (!array_key_exists('display', $params)) {
+            $params['display'] = 'full';
+        }
+        foreach ($options as $p) {
+            foreach ($params as $k => $o) {
+                if (strpos($k, $p) !== false) {
+                    $url_params[$k] = $o;
                 }
             }
-            $endpoint .= http_build_query($url_params);
+        }
+        $endpoint .= http_build_query($url_params);
 
 
         // Create the request
@@ -171,7 +172,14 @@ class Prestashop
     {
         $url = $this->formatUrl($url);
         try {
+
             $request = $this->createRequest('POST', $url, $body);
+//            $this->client->edit([
+//                'resource' => $this->entity,
+//                'putXml' => $xml,
+//                'id' => $this->{$this->primaryKey},
+//                'output_format' => 'JSON',
+//            ]);
             $response = $this->client()->send($request);
 
             return $this->parseResponse($response);

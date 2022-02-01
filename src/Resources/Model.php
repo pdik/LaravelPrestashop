@@ -1,7 +1,7 @@
 <?php
-namespace Pdik\LaravelPrestashop\Resources;
+namespace Pdik\LaravelPrestaShop\Resources;
 
-use Pdik\LaravelPrestashop\Prestashop;
+use Pdik\LaravelPrestaShop\Prestashop;
 
 abstract class Model implements \JsonSerializable
 {

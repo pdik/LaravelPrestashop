@@ -1,10 +1,10 @@
 <?php
 
-namespace Pdik\LaravelPrestashop\Persistance;
+namespace Pdik\LaravelPrestaShop\Persistance;
 
 
-Use Pdik\LaravelPrestashop\Exceptions\PrestashopWebserviceException;
-use Pdik\LaravelPrestashop\Prestashop;
+Use Pdik\LaravelPrestaShop\Exceptions\PrestashopWebserviceException;
+use Pdik\LaravelPrestaShop\Prestashop;
 
 
 trait Storable
